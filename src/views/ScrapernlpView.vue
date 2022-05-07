@@ -1,9 +1,12 @@
 <template>
   <v-container>
+    <div class="descriptiontitle text-center">
+      <p>Desktop GUI - Web Scrapers & NLP</p>
+    </div>
 
     <v-row class="text-center">
-      <v-col class="mb-4 border red">
-        <PictureComp @open-modal="openModal" :image="this.image1" :title="this.points1"/>
+      <v-col class="picbox mb-4 border">
+        <CarouselComp :slideImages="this.slideImages"/>
       </v-col>
       <v-col class="mb-4 border">
         <PictureComp @open-modal="openModal" :image="this.image2" :title="this.points2"/>
@@ -14,13 +17,43 @@
       <v-col class="mb-4 border">
         <PictureComp @open-modal="openModal" :image="this.image3" :title="this.points3"/>
       </v-col>
-      <v-col class="mb-4 border">
-        <PictureComp @open-modal="openModal" :image="this.image4" :title="this.points4"/>
+      <v-col @click="openCodeModal" class="picbox mb-4 border">
+        <PictureComp @open-modal="openModal" :image="this.image4"/>
       </v-col>
     </v-row>
 
+      <v-col v-if="toggleCodeModal">
+        <CodeCarousel @close-code-modal="closeCodeModal" :slideImages="this.codeImages" />
+      </v-col>
       <div v-if="toggleModal">
       <PictureModal @close-modal="closeModal" :image="modalImage" :points="modalPoints"/>
+    </div>
+          <div class="text-center">
+      <p class="descriptiontitle">Project Information</p>
+
+      <div class="overview">
+        <table class="ui celled inverted table">
+        <tbody>
+
+          <tr>
+            <th scope="row">Frontend</th>
+            <td>Not a web frontend - built using PyQt5 to make a local/desktop graphical user interface</td>
+          </tr>
+
+          <tr>
+            <th scope="row">Backend</th>
+            <td>Uses a local sqlite database to store data which is retrieved directly by the GUI. Runs web scrapers in the background that collect data on properties in specified areas, the news, and text data from 'social media', all of which is stored to the database</td>
+          </tr>
+
+          <tr>
+            <th scope="row">Natural Language Processing</th>
+            <td>GET PICTURES OF CODE AND GRAPHS - NOT JUST THE DESKTOP GUI CODE BUT THE PROPER NLP CODE AS WELL</td>
+          </tr>
+
+        </tbody>
+      </table>
+
+      </div>
     </div>
     
   </v-container>
@@ -29,16 +62,21 @@
 <script>
 import PictureComp from '../components/PictureComp.vue'
 import PictureModal from '../components/PictureModal.vue'
+import CarouselComp from '../components/CarouselComp.vue'
+import CodeCarousel from '../components/CodeCarousel.vue'
 
 export default {
 
   name: 'ScraperNlp',
   components: {
     PictureComp,
-    PictureModal
+    PictureModal,
+    CarouselComp,
+    CodeCarousel,
   },
   data: () => ({
     toggleModal: false,
+    toggleCodeModal: false,
     modalImage: String,
     modalPoints: String,
 
@@ -47,15 +85,33 @@ export default {
     fullstackicon: document.getElementById('fullstack-icon'),
     nlpicon: document.getElementById('nlp-icon'),
     computervisionicon: document.getElementById('cv-icon'),
+    rpiicon: document.getElementById('rpi-icon'),
 
     image1: require("@/assets/scrapernlp/topics.jpeg"),
     points1: ["one", "two","four"],
-    image2: require("@/assets/scrapernlp/postlinegraph.jpeg"),
+    image2: require("@/assets/scrapernlp/output1.png"),
     points2: ["one", "two","four"],
-    image3: require("@/assets/scrapernlp/pricegraph.jpeg"),
+    image3: require("@/assets/scrapernlp/output2.png"),
     points3: ["one", "two","four"],
-    image4: require("@/assets/scrapernlp/db.jpeg"),
+    image4: require("@/assets/scrapernlp/cc-nlp2.png"),
     points4: ["one", "two","four"],
+
+    slideImages: [
+    "https://i.imgur.com/2wwPNy3.jpg",
+    "https://i.imgur.com/fzyVHKK.jpg",
+    "https://i.imgur.com/eGPe0vE.jpg",
+    "https://i.imgur.com/df6RxFG.jpg",
+  ],
+
+  codeImages: [
+    "https://i.imgur.com/RVBJYre.png",
+    "https://i.imgur.com/Fwei2kM.png",
+    "https://i.imgur.com/NiwhcEM.png",
+    "https://i.imgur.com/iqITzq1.png",
+    "https://i.imgur.com/MejegWK.png",
+    "https://i.imgur.com/P9qAINC.png",
+
+  ],
 
   }),
   methods: {
@@ -67,7 +123,15 @@ export default {
     },
     closeModal() {
       this.toggleModal = false
-    },    
+    }, 
+    openCodeModal(img) {
+      console.log("open modal")
+      this.toggleCodeModal = true
+      console.log(img)
+    },
+    closeCodeModal() {
+      this.toggleCodeModal = false
+    },   
   },
 
   async created() {
@@ -77,6 +141,24 @@ export default {
     this.fullstackicon.style.color = "yellow"
     this.nlpicon.style.color = "green"
     this.computervisionicon.style.color = "red"
+    this.rpiicon.style.color = "red"
   }
 }
 </script>
+
+
+<style scoped>
+  .picbox {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+  }
+  .descriptiontitle {
+    font-size: xx-large;
+    margin-bottom: 20px;
+  }
+  th {
+    padding-left: 8px;
+    padding-right: -8px;
+  }
+</style>

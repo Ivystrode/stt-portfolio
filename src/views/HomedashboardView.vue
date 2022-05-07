@@ -93,6 +93,7 @@ export default {
     fullstackicon: document.getElementById('fullstack-icon'),
     nlpicon: document.getElementById('nlp-icon'),
     computervisionicon: document.getElementById('cv-icon'),
+    rpiicon: document.getElementById('rpi-icon'),
 
     image1:"",
     image2:require("@/assets/homedashboard/atlasdb.png"),
@@ -105,6 +106,8 @@ export default {
     "https://i.imgur.com/u8gDkoK.jpg",
     "https://i.imgur.com/2lNrgp4.jpg",
     "https://i.imgur.com/hRe3hWl.jpg",
+    "https://i.imgur.com/uWArwtH.png",
+    "https://i.imgur.com/n1ac1Of.png",
   ],
   codeImages: [
     "https://i.imgur.com/Ed1HPta.png",
@@ -142,6 +145,7 @@ export default {
     this.fullstackicon.style.color = "green"
     this.nlpicon.style.color = "green"
     this.computervisionicon.style.color = "green"
+    this.rpiicon.style.color = "green"
   }
 }
 </script>

@@ -34,6 +34,12 @@
                     </v-icon>
 
                 </v-list-item>
+                <v-list-item title="Raspberry Pi" value="raspberrypi">
+                  <v-icon id="rpi-icon">
+                    mdi-code-less-than
+                    </v-icon>
+
+                </v-list-item>
             </v-list>
     </v-layout>
   </v-card>
