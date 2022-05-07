@@ -33,4 +33,7 @@ export default {
     /* min-width: 95vw; */
     
 }
+img {
+    min-width: 50vw;
+}
 </style>

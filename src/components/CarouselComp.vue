@@ -1,22 +1,12 @@
 <template>
-  <v-carousel v-model="model">
+  <v-carousel hide-delimiters>
     <v-carousel-item
       v-for="i in slideImages"
       :key="i"
+      reverse-transition="fade-transition"
+      transition="fade-transition"
+      :src="i"
     >
-      <v-sheet
-        :image="image"
-        height="100%"
-        tile
-      >
-        <v-row
-          class="fill-height"
-          align="center"
-          justify="center"
-        >
-            <img :src="i"/>
-        </v-row>
-      </v-sheet>
     </v-carousel-item>
   </v-carousel>
 </template>
@@ -35,3 +25,9 @@
     }
   }
 </script>
+
+<style scoped>
+    v-carousel {
+        z-index: -2;
+    }
+</style>
