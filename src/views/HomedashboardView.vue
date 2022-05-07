@@ -65,7 +65,7 @@ export default {
     this.frontendicon.style.color = "green"
     this.backendicon.style.color = "green"
     this.fullstackicon.style.color = "green"
-    this.nlpicon.style.color = "red"
+    this.nlpicon.style.color = "green"
     this.computervisionicon.style.color = "green"
   }
 }
