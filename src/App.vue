@@ -1,26 +1,41 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <v-app>
+
+    <v-app-bar app>
+      <HeaderComp/>
+    </v-app-bar>
+
+    <v-navigation-drawer app>
+      <NavBarComp/>
+    </v-navigation-drawer>
+
+    <v-navigation-drawer position="right" app>
+      <NavBarRight/>
+    </v-navigation-drawer>
+
+    <v-main>
+      <router-view/>
+    </v-main>
+
+  </v-app>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import HeaderComp from './components/HeaderComp.vue'
+import NavBarComp from './components/NavBarComp.vue'
+import NavBarRight from './components/NavBarRight.vue'
 
 export default {
   name: 'App',
+
   components: {
-    HelloWorld
-  }
+    HeaderComp,
+    NavBarComp,
+    NavBarRight
+  },
+
+  data: () => ({
+    //
+  }),
 }
 </script>
-
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
