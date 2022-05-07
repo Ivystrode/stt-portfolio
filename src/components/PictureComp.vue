@@ -54,6 +54,7 @@ export default {
 }
 img {
     max-height: 500px;
+    min-height: 400px;
     /* max-width: 700px; */
 }
 </style>

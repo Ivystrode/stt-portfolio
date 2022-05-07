@@ -1,12 +1,13 @@
 <template>
-  <v-card
-    class="mx-auto text-left"
+  <div
   >
     <v-layout>
 
-        <v-app-bar-title>BEN BRAITHWAITE - PORTFOLIO</v-app-bar-title>
+        <v-app-bar-title>
+          <v-toolbar-title>BEN BRAITHWAITE - PORTFOLIO</v-toolbar-title>
+        </v-app-bar-title>
     </v-layout>
-  </v-card>
+  </div>
 </template>
 
 <script>
@@ -21,9 +22,9 @@
 
 <style scoped>
     nav {
-        display: flex;
+        /* display: flex; */
         justify-content: space-between;
-        align-items: center;
+        align-items: left;
         margin-bottom: 0px;
         }
 </style>
