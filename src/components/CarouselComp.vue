@@ -1,11 +1,11 @@
 <template>
-  <v-carousel hide-delimiters>
+  <v-carousel hide-delimiters cycle show-arrors-on-hover>
     <v-carousel-item
       v-for="i in slideImages"
       :key="i"
+      :src="i"
       reverse-transition="fade-transition"
       transition="fade-transition"
-      :src="i"
     >
     </v-carousel-item>
   </v-carousel>
@@ -25,9 +25,3 @@
     }
   }
 </script>
-
-<style scoped>
-    v-carousel {
-        z-index: -2;
-    }
-</style>

@@ -35,5 +35,6 @@ export default {
 }
 img {
     min-width: 50vw;
+    /* max-height: 700px; */
 }
 </style>

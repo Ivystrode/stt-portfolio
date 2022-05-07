@@ -1,18 +1,18 @@
 <template>
   <v-container>
     <v-row class="text-center">
-      <v-col class="mb-4 border red">
+      <v-col class="picbox mb-4 border red">
         <CarouselComp :slideImages="this.slideImages"/>
       </v-col>
-      <v-col class="mb-4 border">
-        <PictureComp @open-modal="openModal" :image="this.image2"/>
+      <v-col class="picbox mb-4 border">
+        <PictureComp @open-modal="openModal" :image="this.image2" :points="this.points2"/>
       </v-col>
     </v-row>
     <v-row class="text-center">
-      <v-col class="mb-4 border">
+      <v-col class="picbox mb-4 border">
         <PictureComp @open-modal="openModal" :image="this.image3"/>
       </v-col>
-      <v-col class="mb-4 border">
+      <v-col class="picbox mb-4 border">
         <PictureComp @open-modal="openModal" :image="this.image4"/>
       </v-col>
     </v-row>
@@ -47,8 +47,12 @@ export default {
 
     image1:"https://pixabay.com/get/g5b5bf95d8ab2556b695038a1b7f4cca889edd645478a1f59d6fa521e47c846e990abf4046ead5b4d71d73c01ec046b18e0c81f14314549a085aeaef487f59c09_640.jpg",
     image2:"https://pixabay.com/get/g5b5bf95d8ab2556b695038a1b7f4cca889edd645478a1f59d6fa521e47c846e990abf4046ead5b4d71d73c01ec046b18e0c81f14314549a085aeaef487f59c09_640.jpg",
+    points2: ["one", "two","four"],
     image3:"https://pixabay.com/get/g5b5bf95d8ab2556b695038a1b7f4cca889edd645478a1f59d6fa521e47c846e990abf4046ead5b4d71d73c01ec046b18e0c81f14314549a085aeaef487f59c09_640.jpg",
+    points3: ["one", "two","four"],
     image4:"https://pixabay.com/get/g5b5bf95d8ab2556b695038a1b7f4cca889edd645478a1f59d6fa521e47c846e990abf4046ead5b4d71d73c01ec046b18e0c81f14314549a085aeaef487f59c09_640.jpg",
+    points4: ["one", "two","four"],
+
 
     slideImages: [
         'https://pixabay.com/get/gbbd34233a7417966a59bc7418ea5f5ee18d23e846597449bcfdcc341e2b4b026750cf227e759b5c40197c8fd8d0c5ea8ec6e64bb270359d62f1a4069967cbdc2_640.jpg',
@@ -80,3 +84,11 @@ export default {
   }
 }
 </script>
+
+<style scoped>
+  .picbox {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+  }
+</style>

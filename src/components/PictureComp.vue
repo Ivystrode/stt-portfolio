@@ -2,7 +2,7 @@
     <div id="borderbox" class="flex justify-center">
         <div id="detection-card" class="rounded-lg shadow-lg bg-slate-900 max-w-LG">
             <a href="#!" data-mdb-ripple="true" data-mdb-ripple-color="light">
-            <img @click="$emit('open-modal', image)" class="rounded-t-lg text-gray-200" :src=image onerror="this.src='https://s3.envato.com/files/236638219/No%20signal%20590x332.jpg'" alt="No video feed detected"/>
+            <img @dblclick="$emit('open-modal', image)" class="rounded-t-lg text-gray-200" :src=image onerror="this.src='https://s3.envato.com/files/236638219/No%20signal%20590x332.jpg'" alt="No video feed detected"/>
             </a>
         </div>
     </div>
@@ -51,5 +51,9 @@ export default {
 }
 #detection-card {
     min-width: 380px;
+}
+img {
+    max-height: 500px;
+    /* max-width: 700px; */
 }
 </style>

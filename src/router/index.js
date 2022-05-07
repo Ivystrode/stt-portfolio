@@ -24,6 +24,11 @@ const routes = [
     path: '/scrapernlp',
     name: 'scrapernlp',
     component: () => import('../views/ScrapernlpView.vue')
+  },
+  {
+    path: '/other',
+    name: 'other',
+    component: () => import('../views/OtherView.vue')
   }
 ]
 

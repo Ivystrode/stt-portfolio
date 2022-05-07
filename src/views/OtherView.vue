@@ -12,11 +12,8 @@
       <v-col class="picbox mb-4 border">
         <PictureComp @open-modal="openModal" :image="this.image3"/>
       </v-col>
-      <v-col @click="openCodeModal" class="picbox mb-4 border">
+      <v-col class="picbox mb-4 border">
         <PictureComp @open-modal="openModal" :image="this.image4"/>
-      </v-col>
-      <v-col v-if="toggleCodeModal">
-        <CodeCarousel @close-code-modal="closeCodeModal" :slideImages="this.codeImages" />
       </v-col>
     </v-row>
       <div v-if="toggleModal">
@@ -29,20 +26,17 @@
 import PictureComp from '../components/PictureComp.vue'
 import PictureModal from '../components/PictureModal.vue'
 import CarouselComp from '../components/CarouselComp.vue'
-import CodeCarousel from '../components/CodeCarousel.vue'
 
 export default {
 
-  name: 'ScraperNlp',
+  name: 'OtherView',
   components: {
     PictureComp,
     PictureModal,
-    CarouselComp,
-    CodeCarousel
+    CarouselComp
   },
   data: () => ({
     toggleModal: false,
-    toggleCodeModal: false,
     modalImage: String,
 
     frontendicon: document.getElementById('frontend-icon'),
@@ -53,22 +47,14 @@ export default {
 
     image1:"",
     image2:"",
-    image3:require("@/assets/homedashboard/botdetectmsg.png"),
-    image4:require("@/assets/homedashboard/ccrfcon.png"),
+    image3:"",
+    image4:"",
     slideImages: [
-    "https://i.imgur.com/OkGmQkH.jpg",
-    "https://i.imgur.com/1DukZfQ.jpg",
-    "https://i.imgur.com/fnSIVL8.jpg",
-    "https://i.imgur.com/u8gDkoK.jpg",
-    "https://i.imgur.com/2lNrgp4.jpg",
-    "https://i.imgur.com/hRe3hWl.jpg",
-  ],
-  codeImages: [
-    "https://i.imgur.com/Ed1HPta.png",
-    "https://i.imgur.com/iehtRVU.png",
-    "https://i.imgur.com/gv7Qy3R.png",
-    "https://i.imgur.com/Fpo0yJE.png",
-    "https://i.imgur.com/1ZHlYnr.png",
+    'https://pixabay.com/get/gbbd34233a7417966a59bc7418ea5f5ee18d23e846597449bcfdcc341e2b4b026750cf227e759b5c40197c8fd8d0c5ea8ec6e64bb270359d62f1a4069967cbdc2_640.jpg',
+    'https://pixabay.com/get/gcb54ec075e17c570fe5b897e8a8ab0dcccb898826c12d1bce4a373b94a70634e97676a5e4fe9ad278e39e23dda6f042d2b0a4171ca77b4e1fffc045d092856cd_640.jpg',
+    'https://pixabay.com/get/g21514d18e61dbcb178948abc10d6eadbeacdf77632134c28784233808d3fd352cf3fcd2ddd0fff78941b8a448561fa9e_640.jpg',
+    'https://pixabay.com/get/g5b5bf95d8ab2556b695038a1b7f4cca889edd645478a1f59d6fa521e47c846e990abf4046ead5b4d71d73c01ec046b18e0c81f14314549a085aeaef487f59c09_640.jpg',
+    'https://pixabay.com/get/g5b5bf95d8ab2556b695038a1b7f4cca889edd645478a1f59d6fa521e47c846e990abf4046ead5b4d71d73c01ec046b18e0c81f14314549a085aeaef487f59c09_640.jpg',
   ]
   }),
   methods: {
@@ -80,14 +66,6 @@ export default {
     },
     closeModal() {
       this.toggleModal = false
-    },
-    openCodeModal(img) {
-      console.log("open modal")
-      this.toggleCodeModal = true
-      console.log(img)
-    },
-    closeCodeModal() {
-      this.toggleCodeModal = false
     },    
   },
 

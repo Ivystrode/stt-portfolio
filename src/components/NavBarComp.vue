@@ -14,8 +14,11 @@
                   <router-link class="project-link" to="/homedashboard">HOME DASHBOARD</router-link>
                 </v-list-item>
 
-                <v-list-item value="homedashboard">
+                <v-list-item value="scrapernlp">
                   <router-link class="project-link" to="/scrapernlp">SCRAPER NLP</router-link>
+                </v-list-item>
+                <v-list-item value="other">
+                  <router-link class="project-link" to="/other">OTHER PROJECTS</router-link>
                 </v-list-item>
             </v-list>
     </v-layout>
