@@ -45,7 +45,7 @@
 
           <tr>
             <th scope="row">Computer Vision</th>
-            <td>A pre-trained model that is configured only to detect people and vehicles</td>
+            <td>A pre-trained model that is configured only to detect people and vehicles, and custom trained face detection that runs on a remote machine</td>
           </tr>
 
           <tr>
