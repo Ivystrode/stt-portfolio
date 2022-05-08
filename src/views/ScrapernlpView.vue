@@ -97,7 +97,7 @@ export default {
     points4: ["one", "two","four"],
 
     slideImages: [
-    "https://i.imgur.com/2wwPNy3.jpg",
+    "https://i.imgur.com/Ld2CxCX.jpg",
     "https://i.imgur.com/fzyVHKK.jpg",
     "https://i.imgur.com/eGPe0vE.jpg",
     "https://i.imgur.com/df6RxFG.jpg",

@@ -4,8 +4,10 @@
   >
     <v-layout>
             <v-list nav>
-                <v-list-item value="intro">PROJECTS</v-list-item>
-
+                <v-list-item value="intro">
+                  <router-link class="project-link" to="/">OVERVIEW</router-link>
+                  </v-list-item>
+                  
                 <v-list-item value="rnet">
                   <router-link class="project-link" to="/rnet">RNET</router-link>
                 </v-list-item>

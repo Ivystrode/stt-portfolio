@@ -13,8 +13,12 @@
       <v-col class="picbox mb-4 border">
         <div class="table">
         <table class="ui celled inverted table">
-          <thead class="descriptiontitle tablehead">Project</thead>
         <tbody>
+
+          <tr>
+            <th scope="row"><strong>Project Name</strong></th>
+            <td>Project name</td>
+          </tr>
 
           <tr>
             <th scope="row">Frontend</th>
@@ -54,8 +58,12 @@
       <v-col class="picbox mb-4 border">
         <div class="table">
         <table class="ui celled inverted table">
-          <thead class="descriptiontitle tablehead">Project</thead>
         <tbody>
+
+          <tr>
+            <th scope="row"><strong>Project Name</strong></th>
+            <td>Project name</td>
+          </tr>
 
           <tr>
             <th scope="row">Frontend</th>
@@ -103,8 +111,12 @@
       <v-col class="picbox mb-4 border">
         <div class="table">
         <table class="ui celled inverted table">
-          <thead class="descriptiontitle tablehead">Project</thead>
         <tbody>
+
+          <tr>
+            <th scope="row"><strong>Project Name</strong></th>
+            <td>Project name</td>
+          </tr>
 
           <tr>
             <th scope="row">Frontend</th>

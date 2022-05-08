@@ -96,7 +96,7 @@ export default {
     rpiicon: document.getElementById('rpi-icon'),
 
     image1:"",
-    image2:require("@/assets/homedashboard/atlasdb.png"),
+    image2:require("@/assets/homedashboard/fe-feeds.png"),
     image3:require("@/assets/homedashboard/botdetectmsg.png"),
     image4:require("@/assets/homedashboard/ccrfcon.png"),
     slideImages: [
@@ -116,6 +116,7 @@ export default {
     "https://i.imgur.com/Fpo0yJE.png",
     "https://i.imgur.com/1ZHlYnr.png",
     "https://i.imgur.com/faznl0n.png",
+    "https://i.imgur.com/LbcbLGz.png",
   ]
   }),
   methods: {
