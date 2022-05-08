@@ -47,10 +47,23 @@
       <v-col class="mb-4 border">
         <PictureComp @open-modal="openModal" :image="this.image3"/>
       </v-col>
-      <v-col @click="openCodeModal" class="picbox mb-4 border">
+      <v-col class="picbox mb-4 border">
         <PictureComp @open-modal="openModal" :image="this.image4"/>
       </v-col>
     </v-row>
+
+    <v-row class="text-center">
+      <v-col class="mb-4 border">
+        <PictureComp @open-modal="openModal" :image="this.image5"/>
+      </v-col>
+      <v-col class="picbox mb-4 border">
+        <PictureComp @open-modal="openModal" :image="this.image6"/>
+      </v-col>
+    </v-row>
+
+      <div v-if="toggleModal">
+      <PictureModal @close-modal="closeModal" :image="modalImage"/>
+    </div>
 
 
   </v-container>
@@ -58,13 +71,17 @@
 
 <script>
 import PictureComp from '../components/PictureComp.vue'
+import PictureModal from '../components/PictureModal.vue'
 export default {
   name: 'MainView',
   components: {
-    PictureComp
+    PictureComp,
+    PictureModal
   },
 
   data: () => ({
+    toggleModal: false,
+    modalImage: String,
     frontendicon: document.getElementById('frontend-icon'),
     backendicon: document.getElementById('backend-icon'),
     fullstackicon: document.getElementById('fullstack-icon'),
@@ -75,6 +92,9 @@ export default {
     image2: "https://i.imgur.com/oZWfx8o.png",
     image3: "https://i.imgur.com/80tz1ie.jpg",
     image4: "https://i.imgur.com/I8gc1b1.jpg",
+
+    image5: "https://i.imgur.com/o6HEgdI.png",
+    image6: "https://i.imgur.com/v4kfo4o.png",
   }),
   methods: {
     openModal(img) {

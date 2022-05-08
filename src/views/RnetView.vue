@@ -8,22 +8,25 @@
         <CarouselComp :slideImages="this.slideImages"/>
       </v-col>
       <v-col class="picbox mb-4 border">
-        <PictureComp @open-modal="openModal" :image="this.image2" :points="this.points2"/>
+        <PictureComp @open-modal="openModal" :image="this.image2"/>
       </v-col>
     </v-row>
     <v-row class="text-center">
       <v-col class="picbox mb-4 border">
         <PictureComp @open-modal="openModal" :image="this.image3"/>
       </v-col>
-      <v-col class="picbox mb-4 border">
+      <v-col @click="openCodeModal" class="picbox mb-4 border">
         <PictureComp @open-modal="openModal" :image="this.image4"/>
       </v-col>
     </v-row>
       <div v-if="toggleModal">
       <PictureModal @close-modal="closeModal" :image="modalImage"/>
     </div>
+      <v-col v-if="toggleCodeModal">
+        <CodeCarousel @close-code-modal="closeCodeModal" :slideImages="this.codeImages" />
+      </v-col>
 
-      <div class="text-center">
+      <div  class="text-center">
       <p class="descriptiontitle">Project Information</p>
 
       <div class="overview">
@@ -67,6 +70,7 @@
 import PictureComp from '../components/PictureComp.vue'
 import PictureModal from '../components/PictureModal.vue'
 import CarouselComp from '../components/CarouselComp.vue'
+import CodeCarousel from '../components/CodeCarousel.vue'
 
 export default {
 
@@ -74,10 +78,12 @@ export default {
   components: {
     PictureComp,
     PictureModal,
-    CarouselComp
+    CarouselComp,
+    CodeCarousel
   },
   data: () => ({
     toggleModal: false,
+    toggleCodeModal: false,
     modalImage: String,
 
     frontendicon: document.getElementById('frontend-icon'),
@@ -87,22 +93,29 @@ export default {
     computervisionicon: document.getElementById('cv-icon'),
     rpiicon: document.getElementById('rpi-icon'),
 
-    image1:"https://pixabay.com/get/g5b5bf95d8ab2556b695038a1b7f4cca889edd645478a1f59d6fa521e47c846e990abf4046ead5b4d71d73c01ec046b18e0c81f14314549a085aeaef487f59c09_640.jpg",
-    image2:"https://pixabay.com/get/g5b5bf95d8ab2556b695038a1b7f4cca889edd645478a1f59d6fa521e47c846e990abf4046ead5b4d71d73c01ec046b18e0c81f14314549a085aeaef487f59c09_640.jpg",
-    points2: ["one", "two","four"],
-    image3:"https://pixabay.com/get/g5b5bf95d8ab2556b695038a1b7f4cca889edd645478a1f59d6fa521e47c846e990abf4046ead5b4d71d73c01ec046b18e0c81f14314549a085aeaef487f59c09_640.jpg",
-    points3: ["one", "two","four"],
-    image4:"https://pixabay.com/get/g5b5bf95d8ab2556b695038a1b7f4cca889edd645478a1f59d6fa521e47c846e990abf4046ead5b4d71d73c01ec046b18e0c81f14314549a085aeaef487f59c09_640.jpg",
-    points4: ["one", "two","four"],
+    image1:"",
+    image2:"https://i.imgur.com/uiqXIni.png",
+    image3:"https://i.imgur.com/WlQxYyB.png",
+    image4:"https://i.imgur.com/EkMutvX.png",
 
 
     slideImages: [
-        'https://pixabay.com/get/gbbd34233a7417966a59bc7418ea5f5ee18d23e846597449bcfdcc341e2b4b026750cf227e759b5c40197c8fd8d0c5ea8ec6e64bb270359d62f1a4069967cbdc2_640.jpg',
-        'https://pixabay.com/get/gcb54ec075e17c570fe5b897e8a8ab0dcccb898826c12d1bce4a373b94a70634e97676a5e4fe9ad278e39e23dda6f042d2b0a4171ca77b4e1fffc045d092856cd_640.jpg',
-        'https://pixabay.com/get/g21514d18e61dbcb178948abc10d6eadbeacdf77632134c28784233808d3fd352cf3fcd2ddd0fff78941b8a448561fa9e_640.jpg',
-        'https://pixabay.com/get/g5b5bf95d8ab2556b695038a1b7f4cca889edd645478a1f59d6fa521e47c846e990abf4046ead5b4d71d73c01ec046b18e0c81f14314549a085aeaef487f59c09_640.jpg',
-        'https://pixabay.com/get/g5b5bf95d8ab2556b695038a1b7f4cca889edd645478a1f59d6fa521e47c846e990abf4046ead5b4d71d73c01ec046b18e0c81f14314549a085aeaef487f59c09_640.jpg',
-      ]
+        "https://i.imgur.com/GlS7T5U.jpg",
+        "https://i.imgur.com/kG6WN7c.jpeg",
+        "https://i.imgur.com/Hur5U6J.jpg",
+        "https://i.imgur.com/JYAamEj.png",
+        "https://i.imgur.com/Hd5Y9lJ.jpg",
+        "https://i.imgur.com/fBCj40U.jpg",
+        "https://i.imgur.com/D1fO6Ea.jpg"
+      ],
+
+    codeImages: [
+    "https://i.imgur.com/fZP5dcl.png",
+    "https://i.imgur.com/QCHbpdo.png",
+    "https://i.imgur.com/Xy279SM.png",
+    "https://i.imgur.com/mYA6paP.png",
+    "https://i.imgur.com/7eTkh9L.png",
+  ]
   }),
   methods: {
     openModal(img) {
@@ -113,6 +126,14 @@ export default {
     },
     closeModal() {
       this.toggleModal = false
+    },
+    openCodeModal(img) {
+      console.log("open modal")
+      this.toggleCodeModal = true
+      console.log(img)
+    },
+    closeCodeModal() {
+      this.toggleCodeModal = false
     },    
   },
 
