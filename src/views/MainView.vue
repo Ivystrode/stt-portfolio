@@ -106,13 +106,13 @@ export default {
     closeModal() {
       this.toggleModal = false
     }, 
-  // created() {
-  //   this.frontendicon.style.color = "red"
-  //   this.backendicon.style.color = "red"
-  //   this.fullstackicon.style.color = "red"
-  //   this.nlpicon.style.color = "red"
-  //   this.computervisionicon.style.color = "red"
-  // }
+  async created() {
+    this.frontendicon.style.color = "white"
+    this.backendicon.style.color = "white"
+    this.fullstackicon.style.color = "white"
+    this.nlpicon.style.color = "white"
+    this.computervisionicon.style.color = "white"
+  }
   }
 }
 </script>
