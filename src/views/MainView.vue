@@ -91,7 +91,7 @@ export default {
     image1: "https://i.imgur.com/tXcb6sO.jpg",
     image2: "https://i.imgur.com/oZWfx8o.png",
     image3: "https://i.imgur.com/80tz1ie.jpg",
-    image4: "https://i.imgur.com/I8gc1b1.jpg",
+    image4: "https://i.imgur.com/98CMyGH.jpg",
 
     image5: "https://i.imgur.com/o6HEgdI.png",
     image6: "https://i.imgur.com/v4kfo4o.png",

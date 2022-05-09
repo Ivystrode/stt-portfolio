@@ -29,6 +29,11 @@ const routes = [
     path: '/other',
     name: 'other',
     component: () => import('../views/OtherView.vue')
+  },
+  {
+    path: '/peerfeedback',
+    name: 'peerfeedback',
+    component: () => import('../views/PeerFeedbackView.vue')
   }
 ]
 

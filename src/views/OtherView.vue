@@ -92,7 +92,7 @@
 
 
 
-        <v-row class="text-center">
+    <v-row class="text-center">
       <v-col class="picbox mb-4 border">
         <CarouselComp :slideImages="this.slideImages"/>
       </v-col>
@@ -175,6 +175,47 @@
     </v-row>
 
 
+    <v-row class="text-center">
+      <v-col class="picbox mb-4 border">
+        <CarouselComp :slideImages="this.slideImages2"/>
+      </v-col>
+      <v-col class="picbox mb-4 border">
+        <div class="table">
+        <table class="ui celled inverted table">
+        <tbody>
+
+          <tr>
+            <th scope="row"><strong>Project Name</strong></th>
+            <td>Networks & Exploitation</td>
+          </tr>
+
+          <tr>
+            <th scope="row">Frontend</th>
+            <td>Rarely applicable, but have had a frontend on projects that have utilised network/exploitation tools (RNET, Home Dashboart MAC address collect)</td>
+          </tr>
+
+          <tr>
+            <th scope="row">Backend</th>
+            <td>Again rarely applicable, but Homebot system does store MAC addresses to the database</td>
+          </tr>
+
+          <tr>
+            <th scope="row">Tools</th>
+            <td>Metasploit, Aircrack suite, Wireshark, HackTheBox, Wireguard, General purpose networking</td>
+          </tr>
+
+          <tr>
+            <th scope="row">Purpose</th>
+            <td>These are just basic examples, but knowledge of how computer networks operate can help with a variety of projects as well as getting free wifi, stopping Patrick hogging the wifi, and monitoring what people are doing online</td>
+          </tr>
+
+        </tbody>
+      </table>
+      </div>
+      </v-col>
+    </v-row>
+
+
 
 
 
@@ -223,6 +264,11 @@ export default {
     "https://camo.githubusercontent.com/d69d0934852f35fe056eeff48aeecf9951d7778f7d0eff1f3a7dd55694db0724/68747470733a2f2f692e696d6775722e636f6d2f4733665433494a2e6a7067",
     "https://camo.githubusercontent.com/542e64e8beb829cad745d3a3d147b3dc4a6da4d9f139383bc01d41ba557a7da6/68747470733a2f2f692e696d6775722e636f6d2f745049755762312e6a7067",
     "https://camo.githubusercontent.com/d2a7caf41d4a7a9f093c6db41823357514863852db0df30ea4c77cf2f7282624/68747470733a2f2f692e696d6775722e636f6d2f554e636f5378422e6a7067",
+  ],
+    slideImages2: [
+    "https://i.imgur.com/1e5yyld.png",
+    "https://i.imgur.com/263OSW9.png",
+    "https://i.imgur.com/mrDyPok.png",
   ],
   codeImages: [
     "https://i.imgur.com/Ed1HPta.png",

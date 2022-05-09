@@ -22,6 +22,9 @@
                 <v-list-item value="other">
                   <router-link class="project-link" to="/other">OTHER PROJECTS</router-link>
                 </v-list-item>
+                <v-list-item value="other">
+                  <router-link class="project-link" to="/peerfeedback">FEEDBACK REVIEW</router-link>
+                </v-list-item>
             </v-list>
     </v-layout>
   </v-card>
