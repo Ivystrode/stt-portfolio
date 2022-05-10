@@ -47,7 +47,7 @@
 
           <tr>
             <th scope="row">Natural Language Processing</th>
-            <td>GET PICTURES OF CODE AND GRAPHS - NOT JUST THE DESKTOP GUI CODE BUT THE PROPER NLP CODE AS WELL</td>
+            <td>Using the web scraper - which is written in python and uses BeautifulSoup4 - to scrape large amounts of text data, I then organise the collected "reports" into one corpus. I then used Python's NLTK library to analyse the data, extracting named entities and attempting to find out the most common topics at the present time. I then also perform sentiment analysis by the country of each post and rank them by polarity and subjectivity.</td>
           </tr>
 
         </tbody>
@@ -89,9 +89,9 @@ export default {
 
     image1: require("@/assets/scrapernlp/topics.jpeg"),
     points1: ["one", "two","four"],
-    image2: require("@/assets/scrapernlp/output1.png"),
+    image2: "https://i.imgur.com/GYERAAJ.png",
     points2: ["one", "two","four"],
-    image3: require("@/assets/scrapernlp/output2.png"),
+    image3: "https://i.imgur.com/8K1IEn8.png",
     points3: ["one", "two","four"],
     image4: require("@/assets/scrapernlp/cc-nlp2.png"),
     points4: ["one", "two","four"],
