@@ -177,7 +177,7 @@
 
     <v-row class="text-center">
       <v-col class="picbox mb-4 border">
-        <CarouselComp :slideImages="this.slideImages2"/>
+        <CarouselNoncycling :slideImages="this.slideImages2"/>
       </v-col>
       <v-col class="picbox mb-4 border">
         <div class="table">
@@ -232,6 +232,7 @@
 import PictureComp from '../components/PictureComp.vue'
 import PictureModal from '../components/PictureModal.vue'
 import CarouselComp from '../components/CarouselComp.vue'
+import CarouselNoncycling from '../components/CarouselNoncycling.vue'
 
 export default {
 
@@ -240,6 +241,7 @@ export default {
     PictureComp,
     PictureModal,
     CarouselComp,
+    CarouselNoncycling
   },
   data: () => ({
     toggleModal: false,

@@ -17,10 +17,10 @@
           <strong>Background: </strong> RA FST Commander
         </v-row>
         <v-row class="mt-4">
-          <strong>Experience: </strong> Full stack web development, general purpose python including web scraping, drone programming, some data analysis, machine learning/neural networks, NLP and computer vision
+          <strong>Experience: </strong> Full stack web development, general purpose python, some data analysis, machine learning/neural networks, NLP and computer vision
         </v-row>
         <v-row class="mt-4">
-          <strong>Frontend: </strong> Django template inheritance; VueJS; some ReactJS
+          <strong>Frontend: </strong> HTML/CSS/JS; Django (template inheritance); VueJS; some ReactJS
         </v-row>
         <v-row class="mt-4">
           <strong>Backend: </strong> Python (Django/Flask), including Django ORM and other databases (Sqlite, PostgreSQL, MongoDB)
