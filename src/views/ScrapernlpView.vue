@@ -8,7 +8,7 @@
       <v-col class="picbox mb-4 border">
         <CarouselComp :slideImages="this.slideImages"/>
       </v-col>
-      <v-col class="mb-4 border">
+      <v-col class=" picbox mb-4 border">
         <PictureComp @open-modal="openModal" :image="this.image2" :title="this.points2"/>
       </v-col>
     </v-row>
