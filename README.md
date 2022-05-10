@@ -1,4 +1,8 @@
-# portfolio-website
+# Portfolio Website
+
+http://ivystrode.com
+
+[![Netlify Status](https://api.netlify.com/api/v1/badges/8c2c7ed4-3856-458e-9d60-c295922f5333/deploy-status)](https://app.netlify.com/sites/comfy-puppy-a3db18/deploys)
 
 ## Project setup
 ```
