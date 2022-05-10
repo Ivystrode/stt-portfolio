@@ -217,6 +217,48 @@
 
 
 
+    <v-row class="text-center">
+      <v-col class="picbox mb-4 border">
+        <div class="table">
+        <table class="ui celled inverted table">
+        <tbody>
+
+          <tr>
+            <th scope="row"><strong>Project Name</strong></th>
+            <td>Sentimenter</td>
+          </tr>
+
+          <tr>
+            <th scope="row">Frontend</th>
+            <td>HTML/Django templates</td>
+          </tr>
+
+          <tr>
+            <th scope="row">Backend</th>
+            <td>Django ORM and sqlalchemy</td>
+          </tr>
+
+          <tr>
+            <th scope="row">Other</th>
+            <td>This project made heavy use of python BeautifulSoup4, a web scraping library, tweepy to get live data from twitter, nltk and numpy (among others) to analyse text data</td>
+          </tr>
+
+          <tr>
+            <th scope="row">Purpose</th>
+            <td>The front end allowed the user to input the subject that they wanted to gather data on, either from news websites via the web scrapers, twitter through the API/live feed, or both. Once activated the news articles/tweets would be stored to a local database. They could then choose to show a plot of sentiment over time on this given subject after collecting as much data as they considered sufficient. They would also see a "wordcloud" visualising the most talked about topics</td>
+          </tr>
+
+        </tbody>
+      </table>
+      </div>
+      </v-col>
+      <v-col class="picbox mb-4 border">
+        <CarouselNoncycling :slideImages="this.slideImages3"/>
+      </v-col>
+    </v-row>
+
+
+
 
 
 
@@ -259,11 +301,11 @@ export default {
     image2:"https://i.imgur.com/7DzmhBn.png",
     image3:"https://i.imgur.com/oZWfx8o.png",
     slideImages: [
-    "https://camo.githubusercontent.com/c2248b974916159bc12f4af0ce4482c6acc91bd6c09cb361a7147a2b353aff31/68747470733a2f2f692e696d6775722e636f6d2f4d6c4c714f75362e6a7067",
-    "https://camo.githubusercontent.com/51576c2e18e8b0e2a9cef837247784eb6679931ae9a097251c16612c99b6c148/68747470733a2f2f692e696d6775722e636f6d2f44366f626737632e6a7067",
+    "https://i.imgur.com/JLLkjeo.png",
+    "https://i.imgur.com/OJhSxf1.jpg",
     "https://camo.githubusercontent.com/62e1e10925f2d545cb1c79a10b6a1e5f038ed33d9ab0793874617942ec602d7a/68747470733a2f2f692e696d6775722e636f6d2f496672484247672e6a7067",
     "https://camo.githubusercontent.com/180ff8f6c0e40d8ac27ebbd68678fe2843696d13513f1ce08727cbc1010ac7a5/68747470733a2f2f692e696d6775722e636f6d2f6c65447238724e2e6a7067",
-    "https://camo.githubusercontent.com/d69d0934852f35fe056eeff48aeecf9951d7778f7d0eff1f3a7dd55694db0724/68747470733a2f2f692e696d6775722e636f6d2f4733665433494a2e6a7067",
+    "https://i.imgur.com/xW0ZnJ4.png",
     "https://camo.githubusercontent.com/542e64e8beb829cad745d3a3d147b3dc4a6da4d9f139383bc01d41ba557a7da6/68747470733a2f2f692e696d6775722e636f6d2f745049755762312e6a7067",
     "https://camo.githubusercontent.com/d2a7caf41d4a7a9f093c6db41823357514863852db0df30ea4c77cf2f7282624/68747470733a2f2f692e696d6775722e636f6d2f554e636f5378422e6a7067",
   ],
@@ -271,6 +313,12 @@ export default {
     "https://i.imgur.com/1e5yyld.png",
     "https://i.imgur.com/263OSW9.png",
     "https://i.imgur.com/mrDyPok.png",
+  ],
+  slideImages3: [
+    "https://i.imgur.com/GTlssVY.png",
+    "https://i.imgur.com/LcLsKzB.png",
+    "https://i.imgur.com/JR2HgqO.png",
+    "https://i.imgur.com/45bTGFA.png"
   ],
   codeImages: [
     "https://i.imgur.com/Ed1HPta.png",

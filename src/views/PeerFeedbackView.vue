@@ -108,11 +108,13 @@ export default {
   data: () => ({
     toggleModal: false,
     modalImage: String,
+
     frontendicon: document.getElementById('frontend-icon'),
     backendicon: document.getElementById('backend-icon'),
     fullstackicon: document.getElementById('fullstack-icon'),
     nlpicon: document.getElementById('nlp-icon'),
     computervisionicon: document.getElementById('cv-icon'),
+    rpiicon: document.getElementById('rpi-icon'),
 
     image1: "https://i.imgur.com/tXcb6sO.jpg",
     image2: "https://i.imgur.com/oZWfx8o.png",
@@ -132,13 +134,14 @@ export default {
     closeModal() {
       this.toggleModal = false
     }, 
-  async created() {
-    this.frontendicon.style.color = "white"
-    this.backendicon.style.color = "white"
-    this.fullstackicon.style.color = "white"
-    this.nlpicon.style.color = "white"
-    this.computervisionicon.style.color = "white"
-  }
+  },
+    async created() {
+    this.frontendicon.style.color = "aqua"
+    this.backendicon.style.color = "aqua"
+    this.fullstackicon.style.color = "aqua"
+    this.nlpicon.style.color = "aqua"
+    this.computervisionicon.style.color = "aqua"
+    this.rpiicon.style.color = "aqua"
   }
 }
 </script>
