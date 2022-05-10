@@ -98,7 +98,7 @@ export default {
 
     slideImages: [
     "https://i.imgur.com/Ld2CxCX.jpg",
-    "https://i.imgur.com/fzyVHKK.jpg",
+    "https://i.imgur.com/IOoEE22.jpg",
     "https://i.imgur.com/eGPe0vE.jpg",
     "https://i.imgur.com/df6RxFG.jpg",
   ],
