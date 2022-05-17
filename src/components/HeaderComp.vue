@@ -4,7 +4,7 @@
     <v-layout>
 
         <v-app-bar-title>
-          <v-toolbar-title>BEN BRAITHWAITE - PORTFOLIO</v-toolbar-title>
+          <v-toolbar-title>PORTFOLIO AND BACKGROUND</v-toolbar-title>
         </v-app-bar-title>
     </v-layout>
   </div>
