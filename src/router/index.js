@@ -1,11 +1,14 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import MainView from '../views/MainView.vue'
+// import MainView from '../views/MainView.vue'
+import SiteNotViewableView from '../views/SiteNotViewableView'
 
 const routes = [
   {
     path: '/',
+    // name: 'home',
+    // component: MainView
     name: 'home',
-    component: MainView
+    component: SiteNotViewableView
   },
   {
     path: '/rnet',
